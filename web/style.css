@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f1ea;
+    color: #3d3d3d;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(90deg, #1f6e7a, #3153b0);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid #d6c3a5;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    gap: 12px;
+    padding: 18px 40px;
+    background: #d6c3a5;
+    border-bottom: 1px solid #b9a58a;
+}
+
+nav button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: #ece7df;
+    color: #5a5a5a;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #3282b8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+nav button.active {
+    background: #23469f;
+    color: white;
+    box-shadow: 0 4px 10px rgba(47, 34, 167, 0.3);
+}
+
+/* MAIN */
+
+main {
+    padding: 30px 40px;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+/* TITULOS */
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    color: #7a1f1f;
+    font-weight: 700;
+}
+
+/* CARD */
+
+.card {
+    background: #fdfbf7;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #d8d1c7;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* FORM */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 12px;
+    border: 1px solid #c7bfb4;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #f5f1ea;
+    transition: 0.2s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    outline: none;
+    border-color: #3234b8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(184, 50, 50, 0.15);
+}
+
+/* BOTÕES */
+
+.btn {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: #1d3b8f;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #191670;
+}
+
+.btn-danger {
+    background: #c0392b;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #992d22;
+}
+
+.btn-success {
+    background: #7f8c8d;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #636e72;
+}
+
+.btn-warning {
+    background: #c49b66;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #a67c52;
+}
+
+/* TABELA */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+th {
+    background: #1f287a;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd4c7;
+    vertical-align: middle;
+    background: #fffdf9;
+}
+
+tr:hover td {
+    background: #f3ece3;
+}
+
+/* ACTIONS */
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* BADGES */
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-green {
+    background: #d5d8dc;
+    color: #4b4b4b;
+}
+
+.badge-yellow {
+    background: #e8d7bf;
+    color: #7a5a2c;
+}
+
+/* MENSAGENS */
+
+.msg {
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.msg-success {
+    background: #e8dfd1;
+    color: #5e4630;
+    border-left: 5px solid #8f1d1d;
+}
+
+.msg-error {
+    background: #f4d6d6;
+    color: #7a1f1f;
+    border-left: 5px solid #c0392b;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    header,
+    nav,
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 0.82rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
